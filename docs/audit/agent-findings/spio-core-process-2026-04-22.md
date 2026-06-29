@@ -16,9 +16,9 @@ Scope: `resolver`, `manifest`, `toolchain`, `process lifecycle`, `state machine`
 
 ## Verification
 
-- `cmake --build /home/unka/styio-spio/build-codex --target spio_native_tests -j2`
-- `/home/unka/styio-spio/build-codex/bin/spio_native_tests --gtest_filter='ProcessTests.StreamsLargeStdinWhileDrainingStdout:ResolverTests.ResolvesLargeGitSnapshotsWithoutArchiveTruncation'`
-- `/home/unka/styio-spio/build-codex/bin/spio_native_tests --gtest_filter='ProcessTests.*:ResolverTests.*'`
+- `cmake --build <spio-workspace>/build-codex --target spio_native_tests -j2`
+- `<spio-workspace>/build-codex/bin/spio_native_tests --gtest_filter='ProcessTests.StreamsLargeStdinWhileDrainingStdout:ResolverTests.ResolvesLargeGitSnapshotsWithoutArchiveTruncation'`
+- `<spio-workspace>/build-codex/bin/spio_native_tests --gtest_filter='ProcessTests.*:ResolverTests.*'`
 
 ## Files changed
 

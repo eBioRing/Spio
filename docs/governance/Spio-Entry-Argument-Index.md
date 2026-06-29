@@ -1532,7 +1532,7 @@ Arguments:
 - `[target-dir]`
   - optional
   - copy destination
-  - defaults to `/Users/unka/DevSpace/Unka-Malloc/styio-spio`
+  - defaults to `<spio-workspace>`
 
 ## 6. Public Environment Variables
 

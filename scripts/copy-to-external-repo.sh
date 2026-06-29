@@ -2,7 +2,7 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-TARGET="${1:-/Users/unka/DevSpace/Unka-Malloc/styio-spio}"
+TARGET="${1:-<spio-workspace>}"
 
 mkdir -p "$TARGET"
 

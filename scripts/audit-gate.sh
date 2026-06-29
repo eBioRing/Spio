@@ -37,8 +37,8 @@ done
 if [[ -z "$AUDIT_BIN" ]]; then
   for candidate in \
     "$ROOT/../styio-audit/bin/styio-audit" \
-    "/home/unka/eBioRing/styio-audit/bin/styio-audit" \
-    "/home/unka/styio-audit/bin/styio-audit"; do
+    "<styio-audit-bin>" \
+    "<styio-audit-bin>"; do
     if [[ -x "$candidate" ]]; then
       AUDIT_BIN="$candidate"
       break

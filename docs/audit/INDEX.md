@@ -10,10 +10,10 @@
 
 | Path | Entry | Summary |
 |------|-------|---------|
-| `agent-findings/` | [Audit Agent Findings](./agent-findings/README.md) | Index parallel audit shards written by external audit agents for styio-spio. |
+| `agent-findings/` | [Audit Agent Findings](./agent-findings/README.md) | Index parallel audit shards written by external audit agents for pafio. |
 
 ## Files
 
 | Path | Entry | Summary |
 |------|-------|---------|
-| `EXTERNAL-AUDIT-2026-04-22.md` | [External Audit 2026-04-22](./EXTERNAL-AUDIT-2026-04-22.md) | Record the external audit pass over styio-spio using the styio-audit project module for-styio-spio. |
+| `EXTERNAL-AUDIT-2026-04-22.md` | [External Audit 2026-04-22](./EXTERNAL-AUDIT-2026-04-22.md) | Record the external audit pass over pafio using the styio-audit project module for-pafio. |

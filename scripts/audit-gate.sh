@@ -37,8 +37,8 @@ done
 if [[ -z "$AUDIT_BIN" ]]; then
   for candidate in \
     "$ROOT/../styio-audit/bin/styio-audit" \
-    "/home/unka/eBioRing/styio-audit/bin/styio-audit" \
-    "/home/unka/styio-audit/bin/styio-audit"; do
+    "<styio-audit-bin>" \
+    "<styio-audit-bin>"; do
     if [[ -x "$candidate" ]]; then
       AUDIT_BIN="$candidate"
       break
@@ -60,9 +60,12 @@ if git -C "$AUDIT_ROOT" rev-parse --is-inside-work-tree >/dev/null 2>&1; then
 fi
 
 if git -C "$ROOT" rev-parse --is-inside-work-tree >/dev/null 2>&1; then
-  for branch in stable nightly ai-dev; do
-    git -C "$ROOT" fetch --no-tags origin "+refs/heads/${branch}:refs/remotes/origin/${branch}" 2>/dev/null || true
+  for branch in release stable nightly; do
+    GIT_TERMINAL_PROMPT=0 git -C "$ROOT" \
+      -c http.lowSpeedLimit=1024 \
+      -c http.lowSpeedTime=10 \
+      fetch --no-tags origin "+refs/heads/${branch}:refs/remotes/origin/${branch}" 2>/dev/null || true
   done
 fi
 
-"$AUDIT_BIN" gate --repo "$ROOT" --project styio-spio
+"$AUDIT_BIN" gate --repo "$ROOT" --project Pafio
